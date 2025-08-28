@@ -1,0 +1,712 @@
+body.principal, 
+body.principal html {
+  overflow-x: hidden; /* elimina scroll fantasma horizontal */
+}
+
+body.producto html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Bloquea scroll horizontal */
+
+}
+
+body.principal {
+    font-family: Arial, Helvetica, sans-serif; /* Fuente para el texto */
+    background-color: #f4f4f9;                 /*Color de fondo */
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    text-align: center;                        /* Centralización del texto */
+}
+
+body.principal header {
+    background: #e3d9cf;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+body.principal header h1 {
+    font-family: 'Bakery Goods', sans-serif;
+    margin-bottom: 10px;
+    color: #2a2a2a;
+    font-size: 3em;
+}
+
+/* Personalización de la sesión de navegación, y el redireccionamiento a la página de productos */
+
+body.principal nav a {
+    color: #5c3e30;
+    text-decoration: none;
+    margin: 0 15px;
+    font-family: 'Bakery Goods', sans-serif;
+    transition: color 0.3s ease;
+}
+
+body.principal nav a:hover {
+    color: #cc8f34;
+}
+
+body.principal nav a.separado {
+    margin: 0px 10px 10px 0px;
+    font-family: 'Bakery Goods', sans-serif;
+    font-size: 2.5em;
+    color: #5c3e30;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+body.principal nav a.separado:hover {
+    color: #cc8f34;
+}
+
+body.principal h1 {
+    color: black; /* Color de titulo */
+}
+
+body.principal section {
+    margin: 40px 0;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+}
+
+/* Personalización del redireccionamiento en la palabra "Sobre mí" */
+
+body.principal #etiqueta-sobremi { 
+    color: #333;
+    text-decoration: none;
+    transition: filter 0.3s ease, color 0.3s ease;
+}
+
+body.principal #etiqueta-sobremi:hover {
+    filter: blur(0.5px);
+    color: rgb(10, 41, 97);
+}
+
+body.principal section a {
+    display: inline-block;
+}
+
+/* Personalización de la sesión habilidades */
+
+body.principal ul, 
+body.principal ol {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 20px; 
+}
+
+body.principal .check::after {
+    position: relative;
+    padding-left: 10px;
+    content: "✔";
+    color: green;
+    left: 0;
+}
+
+/* Personalización de formulario de contacto */
+
+body.principal form input, 
+body.principal form textarea { 
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Personalización de boton de "enviar" */
+
+body.principal form button {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+body.principal form button:hover {
+     transform: translateX(0);
+}
+
+body.principal form button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,255,255,0.5) 10%, transparent 50%);
+    transform: scale(0);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+body.principal form button:hover::after {
+    transform: scale(4);
+    opacity: 1;
+}
+
+body.principal footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background: #333;
+    color: #fff;
+}
+
+body.principal * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Hora de transformar a Responsive esta verga */
+@media (max-width: 768px) {
+    body.principal nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    body.principal nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    body.principal nav a.separado {
+        margin-bottom: -10px;
+    }
+    
+    body.principal section {
+        padding: 15px;
+    }
+
+    body.principal form input, 
+    body.principal form textarea {
+        font-size: 16px;
+    }
+}
+
+/* ================== ESTILOS PARA PRODUCTOS ================== */
+
+body.producto .navbarra {
+    position: fixed; /* para dejar fijado arriba */
+    top: 0; /* lo pega en la esquina superior*/
+    left: 0; /* lo pega en la esquina superior izquierda*/
+    width: 100%; /* ancho total de la pantalla */
+    background: #fcefee;
+    display: flex; /* alinea en fila */
+    justify-content: space-between; /* separa los elementos, logo a izq y links a derecha */
+    align-items: center; /* elementos en forma vertical  */
+    padding: 15px 30px;  /* Espacio i nterno: 15px arriba/abajo, 30px izquierda/derecha */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* sombreado */
+    z-index: 1000; /* siempre se mantendrá visible y sobre encima*/
+}
+
+body.producto .logo {
+    font-size: 1.5rem;
+    margin-left: 40px;
+    font-family: 'Bakery Goods', sans-serif;
+    font-weight: bold; /* estilo de fuente negrilla*/
+    color: #5c3d2e;
+}
+
+body.producto .menu {
+    list-style: none; /* se eliminan puntos o simbolos de la lista */
+    display: flex; /* Enlaces uno al lado del otro */
+    gap: 20px;      /* espacio entre los enlaces */
+}
+
+body.producto .menu li a {
+    text-decoration: none; /* sin subrayado */
+    font-family: 'Bakery Goods', sans-serif;
+    color:  #5c3e30;
+    font-weight: 600; /* menos oscuro de la negrilla */
+    transition: color 0.3s ease;
+}
+
+body.producto .menu li a:hover {
+    color: #cc8f34; /* cambia el color al pasar el cursor */
+}
+
+body.producto .botones-menu {
+    gap: 10px;
+    margin-left: 20px;
+    white-space: nowrap;
+}
+
+body.producto .botones-menu .btn {
+    text-decoration: none;
+    padding: 6px 12px;
+    font-family: 'Bakery Goods', sans-serif;
+    color: #5c3e30;
+    border-radius: 4px;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+}
+
+body.producto .botones-menu .btn:hover {
+    color: #cc8f34;
+}
+
+body.producto .btn-carrito {
+    text-decoration: none;
+    padding: 6px 12px;
+    color: #5c3e30;
+    border-radius: 4px;
+    margin-left: 10px;
+    margin-right: 40px;
+}
+
+body.producto .hero {
+    background: url("Galeria de fotos/Fondo.jpg") no-repeat center center/cover;
+    height: 90vh;  /* EL fondo ocupará el 90% de la pantalla*/
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    color: white;
+    position: relative;
+    margin-top: 70px;
+    padding-left: 20px;
+    line-height: 1.2;
+}
+
+body.producto .hero::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0,4); /* para oscurecer el fondo*/
+}
+
+body.producto .hero h1 {
+    font-size: 7rem;
+    font-family: "Handlee", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body.producto .productos {
+    padding: 50px 20px; /* Espaciado interno */
+    text-align: center;
+    background: #f9f9f9;
+}
+
+body.producto .productos h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+body.producto .all-product {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+body.producto .foto-producto {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0,1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+body.producto .foto-producto:hover {
+    transform: translateY(-5px);
+}
+
+body.producto .foto-producto img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+body.producto .foto-producto h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+body.producto .foto-producto p {
+    font-size: 1.2rem;
+    color: #5c3e30;
+    margin-bottom: 15px;
+}
+
+body.producto .foto-producto .precio{
+    font-size: 1rem;
+    font-weight: bold;
+    color:#e63946 ;
+}
+/* ..... FOOTER ..... */
+body.producto footer{
+    background: #5c3d2e;
+    padding: 40px 20px 20px;
+    margin-top: 60px;
+    color: #fff;
+}
+
+body.producto .footer-contenido {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+body.producto .footer-col h3 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    color: #f4f4f9;
+}
+
+body.producto .footer-col p,
+body.producto .footer-col a {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #f9f9f9;
+    text-decoration: none; /* desaparece barra abajo de los enlaces */
+}
+
+body.producto .footer-col a:hover {
+    color: #e7b980;
+}
+
+body.producto .redes-sociales {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+body.producto .footer-boton {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    margin-top: 30px;
+    font-size: 1rem;
+}
+
+/* === Estipos para boton hamburguesa === */
+
+body.producto .hamburguesa {
+    position: absolute;
+    display: block;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    padding: 5px;
+    order: 1;
+    z-index: 3001;
+    pointer-events: auto;
+}
+body.producto .grupo-izquierda{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+body.producto .logo {   order: 2;}
+body.producto .menu { order: 3;}
+body.producto .botones-menu { order: 4;}
+
+body.producto .hamburguesa span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    margin: 5px 0;
+    background: #5c3d2e;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Estilos para boton de menú lateral */
+
+/* Menú lateral cerrado u oculto*/
+body.producto .menu-lateral {
+    position: fixed;
+    top: 0;
+    left: 0; /* lo escondemos a la izquierda */
+    width: 280px;
+    height: 100%;
+    background: #fcefee;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.2);
+    transform: translateX(-100%);
+}
+
+body.producto .menu-lateral ul {
+    list-style: none;
+    font-family: "Slabo 13px", serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    line-height: 2;
+    letter-spacing: 1.5px;
+
+}
+
+body.producto .menu-lateral ul li {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+body.producto .menu-lateral.activo ul li{
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Efecto en cascada usando nth-child */
+body.producto .menu-lateral.activo ul li:nth-child(1) { transition-delay: 0.1s; }
+body.producto .menu-lateral.activo ul li:nth-child(2) { transition-delay: 0.2s; }
+body.producto .menu-lateral.activo ul li:nth-child(3) { transition-delay: 0.3s; }
+body.producto .menu-lateral.activo ul li:nth-child(4) { transition-delay: 0.4s; }
+body.producto .menu-lateral.activo ul li:nth-child(5) { transition-delay: 0.5s; }
+body.producto .menu-lateral.activo ul li:nth-child(6) { transition-delay: 0.4s; }
+body.producto .menu-lateral.activo ul li:nth-child(7) { transition-delay: 0.3s; }
+body.producto .menu-lateral.activo ul li:nth-child(8) { transition-delay: 0.2s; }
+body.producto .menu-lateral.activo ul li:nth-child(9) { transition-delay: 0.1s; }
+
+body.producto .menu-lateral .menu2{
+    background: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    transition: all 0.3s ease;
+    z-index: 1;
+
+}
+
+body.producto .menu-lateral .menu2:hover{
+    background: linear-gradient(90deg, #d69661 100%, transparent 40%);
+    background-size: 100% 80%;
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    color: white;
+    border-radius: 15px;
+    padding-left: 20px;
+}
+
+body.producto .menu-lateral a {
+    text-decoration: none;
+    background: none;
+    line-height: 3;
+    display: block;
+    color: #5c3d2e;
+}
+
+body.producto .menu-lateral a:hover {
+    color: white;
+}
+
+ 
+body.producto  .menu-lateral .submenu1 a{
+    background: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    transition: all 0.1s ease;
+    border-radius: 10px;
+}
+
+ body.producto .menu-lateral .submenu1 a:hover{
+    background: linear-gradient(90deg, #c4af9e 100%, transparent 50%);
+    background-size: 100% 80%;
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    color: white;
+    padding-left: 20px;
+    max-width: 200px;
+}
+
+
+body.producto .menu-lateral .submenu1 ul{
+    margin: 0;
+    padding-left: 20px;
+
+}
+
+/* Menú lateral abierto*/
+
+body.producto .menu-lateral.activo {
+    transform: translateX(0);
+}
+
+/* Botón cerrar */
+body.producto .menu-lateral .cerrar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 32px;
+    height: 32px;
+    font-size: 2rem;
+    line-height: 1;
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    z-index: 2002;
+}
+
+body.producto .menu-lateral .cerrar:hover {
+    color: #cc8f34;
+    transform: scale(1.1);
+}
+
+/* Flecita de domicilios */
+
+/*estado normal de la flecha hacia abajo (no se ven las redes sociales)*/
+
+body.producto .menu-lateral .submenu-items {
+    max-height: 150px;
+    overflow: hidden;
+    transition: max-height 0.4s ease, border-left-color 0.3s ease;
+    margin-left: 25px;
+    padding-left: 10px;
+    border-left: 2px;
+}
+
+body.producto .menu-lateral .submenu-items:not(.activo) {
+    max-width: 0;
+    border-left-color: transparent;
+    opacity: 0;
+    display: none;
+}
+
+/* FONDO DESVANECIDO AL ABRIR MENÚ LATERAL*/
+
+body.producto .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4); /* fondo semi-transparente */
+    backdrop-filter: blur(4px); /* desvanece el fondo, pero debe haber un background en trasnparente o semi */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3 ease;
+    z-index: 1500;
+}
+
+body.producto .overlay.activo {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+/* ===== Otra vez volveré esta monda responsiva ===== */
+
+body.producto html, body {
+    overflow-x: hidden;
+}
+/* ====== ≥ 1024px a 769px (tablets y laptops pequeñas) ====== */
+
+@media (max-width: 1024px)  {
+    body.producto .navbarra {
+        padding: 12px 20px;
+    }
+
+    body.producto .menu {
+        gap: 14px;
+        flex-wrap: wrap; /* movimiento de enlaces hacia abajo si no caben*/
+    }
+
+    body.producto .hero {
+        height: 75vh;
+    }
+
+    body.producto .hero h1 {
+        font-size: 2.4rem;
+    }
+
+    body.producto .all-product{
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 18px;
+    }
+
+}
+/* ====== ≤ 768px (tablet vertical / móviles grandes) ====== */
+
+@media (max-width: 768px){
+    body.producto .navbarra{
+        padding: 10px 16px ;
+        flex-wrap: wrap;
+    }
+
+    body.producto .logo {
+        width: 100%;
+        text-align: center;
+        margin-right: 60px;
+        margin-bottom: 6px;
+    }
+
+    body.producto .menu {
+        width: 100%;
+        justify-content: center;
+        margin-right: 80px;
+        margin-left: 10px;
+        gap:12px;
+
+    }
+
+    body.producto .botones-menu{
+        width: 100%;
+        justify-content: center;
+        margin-top: 8px;
+        margin-left: 100px;
+        gap: 8px;
+    }
+
+    body.producto .hero {
+        margin-top: 110px;
+        height: 76vh;
+    }
+
+    body.producto .hero h1{
+        font-size: 2.4rem;
+        line-height: 1.2;
+    }
+
+    body.producto .hero p {
+        font-size: 1rem;
+    }
+
+    body.producto .btn {
+        padding: 8px 14px;
+        font-size: 0.95rem;
+    }
+    body.producto .productos {
+        padding: 36px 16px;
+    }
+
+    body.producto .all-product {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 16px;
+    }
+
+    body.producto .foto-producto{
+        padding: 14px;
+    }
+
+    body.producto .foto-producto h3{
+        font-size: 1.05rem;
+    }
+
+    body.producto .foto-producto p{
+        font-size: 0.9rem;
+    }
+}

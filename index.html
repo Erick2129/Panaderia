@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panaderia Rojanos</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/bakery-goods" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Slabo+13px&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="producto">
+
+    <!-- Navegación -->
+    <nav class="navbarra">
+        <div class="grupo-izquierda">
+            <div class="logo">🍞 Panadería</div>
+            <button id="btn-hamburguesa" class="hamburguesa" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-lateral">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="menu-lateral" id="menu-lateral">
+            <button class="cerrar" id="cerrar-menu" aria-label="Cerrar menú">X</button>
+            <ul>
+                <li class="submenu1">
+                    <a href="#" class="flechita">Domicilios</a>
+                    <ul class="submenu-items">
+                        <li><a href="#">WhatsApp</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Telefónico</a></li>
+                    </ul>
+                </li>
+                <li class="menu2"><a href="#">Panes</a></li>
+                <li class="menu2"><a href="#">Especiales</a></li>
+                <li class="menu2"><a href="#">Galletas</a></li>
+                <li class="menu2"><a href="#">Tajados</a></li>
+                <li class="menu2"><a href="#">Pasteles</a></li>
+                <li class="menu2"><a href="#">Productos destacados</a></li>
+                <li class="menu2"><a href="#">Ubicación</a></li>
+                <li class="menu2"><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="overlay" id="overlay"></div>
+        <ul id="menu-principal" class="menu">
+            <li><a href="#"> Inicio</a></li>
+            <li><a href="#">Sobre mí</a></li>
+            <li><a href="#footer-contenido">Contactanos</a></li>
+            <li><a href="#catalogo">Nuestros productos</a></li>
+        </ul>
+        <div class="botones-menu">
+            <a href="#" class="btn"> Usuario</a>
+            <a href="#" class="btn-carrito">🛒 $0</a>
+        </div>
+    </nav>
+    <!--    PARTE PREVIA A PRODUCTOS (Hero contenido)-->
+    <header id="inicial" class="hero">
+        <div class="contenido-hero">
+            <h1>Pan fresco, <br> Sonrisas diarias :D</h1>
+        </div>
+    </header>
+    
+    <!--  Productos  -->
+
+    <section id="catalogo" class="productos">
+        <h2>Nuestros productos</h2>
+        
+        <div class="all-product">
+            <div class="foto-producto">
+                <img src="Galeria de fotos/pan croissant.jpeg" alt="croissant">
+                <h3>Pan Croissant</h3>
+                <p> Deleitate de su sabor, un producto suave y delicioso.</p>
+                <span class="precio">Valor: $2,500</span>
+            </div>
+
+            <div class="foto-producto">
+                <img src="Galeria de fotos/pan de queso.jpeg" alt="pan de queso">
+                <h3>Pan de queso</h3>
+                <p> Deleitate de su sabor, un producto suave y delicioso.</p>
+                <span class="precio">Valor: $3,500</span>
+            </div>
+
+            <div class="foto-producto">
+                <img src="Galeria de fotos/pan frances.jpg"alt="pan frances">
+                <h3>Pan Frances</h3>
+                <p> Deleitate de su sabor, un producto suave y delicioso.</p>
+                <span class="precio">Valor: $5,500</span>
+            </div>
+
+            <div class="foto-producto">
+                <img src="Galeria de fotos/tajado.jpg"alt="tajado">
+                <h3>Pan Tajado</h3>
+                <p> Deleitate de su sabor, un producto suave y delicioso.</p>
+                <span class="precio">Valor: $10,000</span>
+            </div>
+        </div>    
+    </section>
+    
+    <footer>
+        <div id="footer-contenido" class="footer-contenido">
+
+            <div class="footer-col">
+                <h3>🥖 Panadería Rojanos</h3>
+                <p>Tradición y frescura en cada producto. <br>
+                    Nuestra visión es siempre 
+                    llevar una <br>sonrisa con nuestro sabor único.</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>📍 Contáctanos</h3>
+                <p>📌 Calle 123 #45-67, Barranquilla</p>
+                <p>📞 +57 300 123 4567</p>
+                <p>✉️ contacto@rojano-pan.com</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>🌐 Síguenos</h3>
+                <div class="redes-sociales">
+                    <!-- Icons by Font Awesome (https://fontawesome.com) -->
+                    <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+                    <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a>  
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-boton">
+            <small>&copy; 2025 Ing. Erick Rojano - Todos los derechos reservados</small>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
