@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panes - Pando</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="64x64" href="Galeria de fotos/Logo Panadería Pando-4-Photoroom.png">
+    <link href="https://fonts.cdnfonts.com/css/bakery-goods" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Slabo+13px&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navegación sub-página-->
+<nav class="navbarra">
+        <div class="grupo-izquierda">
+            <div class="logo"> 
+                <img src="Galeria de fotos/Logo Panadería Pando-4-Photoroom.png" alt="logo" class="icono">
+            </div>
+            <button id="btn-hamburguesa" class="hamburguesa" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-lateral">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="menu-lateral" id="menu-lateral">
+            <button class="cerrar" id="cerrar-menu" aria-label="Cerrar menú">X</button>
+            <ul>
+                <li class="submenu1">
+                    <a href="#" class="flechita">Domicilios</a>
+                    <ul class="submenu-items">
+                        <li><a href="#">WhatsApp</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Telefónico</a></li>
+                    </ul>
+                </li>
+                <li class="menu2"><a href="panes.html">Panes</a></li>
+                <li class="menu2"><a href="#">Especiales</a></li>
+                <li class="menu2"><a href="#">Galletas</a></li>
+                <li class="menu2"><a href="#">Tajados</a></li>
+                <li class="menu2"><a href="#">Pasteles</a></li>
+                <li class="menu2"><a href="#">Productos destacados</a></li>
+                <li class="menu2"><a href="#">Ubicación</a></li>
+                <li class="menu2"><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="overlay" id="overlay"></div>
+        <ul id="menu-principal" class="menu">
+            <li><a href="index.html"> Inicio</a></li>
+            <li><a href="#">Sobre mí</a></li>
+            <li><a href="#footer-contenido">Contactanos</a></li>
+            <li><a href="#catalogo">Nuestros productos</a></li>
+        </ul>
+        <div class="botones-menu">
+            <a href="#" class="btn"> Usuario</a>
+            <a href="#" class="btn-carrito">🛒 $0</a>
+        </div>
+    </nav>
+ <!-- ✅ Hero de la subpágina -->
+  <header class="hero-panes">
+      <div class="contenido-hero">
+          <h1>Nuestros Panes</h1>
+          <p>Recién horneados, crujientes y con el mejor sabor artesanal.</p>
+      </div>
+  </header>
+
+  <!-- ✅ Catálogo de panes -->
+  <section id="catalogo" class="productos">
+      <h2>Panes artesanales</h2>
+      <div class="all-product">
+          <div class="foto-producto">
+              <img src="Galeria de fotos/pan croissant.jpeg" alt="croissant">
+              <h3>Pan Croissant</h3>
+              <p>Deleítate de su sabor, un producto suave y delicioso.</p>
+              <span class="precio">Valor: $2,500</span>
+          </div>
+
+          <div class="foto-producto">
+              <img src="Galeria de fotos/pan de queso.jpeg" alt="pan de queso">
+              <h3>Pan de queso</h3>
+              <p>Clásico y lleno de sabor, ideal para acompañar.</p>
+              <span class="precio">Valor: $3,500</span>
+          </div>
+
+          <div class="foto-producto">
+              <img src="Galeria de fotos/pan frances.jpg" alt="pan frances">
+              <h3>Pan Francés</h3>
+              <p>Perfecto para desayunos y comidas ligeras.</p>
+              <span class="precio">Valor: $5,500</span>
+          </div>
+      </div>
+  </section>
+
+  <!-- ✅ Footer -->
+  <footer>
+      <div id="footer-contenido" class="footer-contenido">
+          <div class="footer-col">
+              <h3>🥖 Panadería Rojanos</h3>
+              <p>Tradición y frescura en cada producto. <br>
+                 Nuestra visión es siempre llevar una <br>
+                 sonrisa con nuestro sabor único.</p>
+          </div>
+
+          <div class="footer-col">
+              <h3>📍 Contáctanos</h3>
+              <p>📌 Calle 123 #45-67, Barranquilla</p>
+              <p>📞 +57 300 123 4567</p>
+              <p>✉️ contacto@rojano-pan.com</p>
+          </div>
+
+          <div class="footer-col">
+              <h3>🌐 Síguenos</h3>
+              <div class="redes-sociales">
+                  <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+                  <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                  <a href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a>  
+              </div>
+          </div>
+      </div>
+
+      <div class="footer-boton">
+          <small>&copy; 2025 Ing. Erick Rojano - Todos los derechos reservados</small>
+      </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
