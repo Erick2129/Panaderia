@@ -28,8 +28,8 @@
                 <span></span><span></span><span></span>
             </button>
         </div>
-        <div class="menu-lateral" id="menu-lateral">
-            <button class="cerrar" id="cerrar-menu" aria-label="Cerrar menú">X</button>
+        <aside class="menu-lateral" id="menu-lateral">
+            <button class="cerrar" id="cerrar-menu" aria-label="Cerrar menú">x</button>
             <ul>
                 <li class="submenu1">
                     <a href="#" class="flechita">Domicilios</a>
@@ -48,7 +48,7 @@
                 <li class="menu2"><a href="#">Ubicación</a></li>
                 <li class="menu2"><a href="#">Contacto</a></li>
             </ul>
-        </div>
+        </aside>
         <div class="overlay" id="overlay"></div>
         <ul id="menu-principal" class="menu">
             <li><a href="#"> Inicio</a></li>
@@ -78,28 +78,52 @@
                 <img src="Galeria de fotos/pan croissant.jpeg" alt="croissant">
                 <h3>Pan Croissant</h3>
                 <p> Deleitate de su sabor, un producto suave y delicioso.</p>
-                <span class="precio">Valor: $2,500</span>
+                <div class="precio-carrito">
+                    <span class="precio">Valor: $2,500</span>
+                    <button class="btn-agregar" data-nombre="Pan Croissant" data-precio="2500">
+                        <i class="fas fa-cart-plus"></i>
+                        <span>Agregar</span>
+                    </button>
+                </div>
             </div>
 
             <div class="foto-producto">
                 <img src="Galeria de fotos/pan de queso.jpeg" alt="pan de queso">
                 <h3>Pan de queso</h3>
                 <p> Deleitate de su sabor, un producto suave y delicioso.</p>
-                <span class="precio">Valor: $3,500</span>
+                <div class="precio-carrito">
+                    <span class="precio">Valor: $3,500</span>
+                    <button class="btn-agregar" data-nombre="Pan de queso" data-precio="3500">
+                        <i class="fas fa-cart-plus"></i>
+                        <span>Agregar</span> 
+                    </button>
+                </div>
             </div>
 
             <div class="foto-producto">
                 <img src="Galeria de fotos/pan frances.jpg"alt="pan frances">
-                <h3>Pan Frances</h3>
+                <h3>Pan Francés</h3>
                 <p> Deleitate de su sabor, un producto suave y delicioso.</p>
-                <span class="precio">Valor: $5,500</span>
+                <div class="precio-carrito">
+                    <span class="precio">Valor: $5,500</span>
+                    <button class="btn-agregar" data-nombre="Pan Frances" data-precio="5500">
+                        <i class="fas fa-cart-plus"></i>
+                        <span>Agregar</span>  
+                    </button>
+                </div>
             </div>
 
             <div class="foto-producto">
                 <img src="Galeria de fotos/tajado.jpg"alt="tajado">
                 <h3>Pan Tajado</h3>
                 <p> Deleitate de su sabor, un producto suave y delicioso.</p>
-                <span class="precio">Valor: $10,000</span>
+                <div class="precio-carrito">
+                    <span class="precio">Valor: $10,000</span>
+                    <button class="btn-agregar" data-nombre="Pan Tajado" data-precio="10000">
+                        <i class="fas fa-cart-plus"></i>
+                        <span>Agregar</span>
+                    </button>
+                </div>
             </div>
         </div>    
     </section>

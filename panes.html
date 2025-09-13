@@ -22,7 +22,7 @@
 <nav class="navbarra">
         <div class="grupo-izquierda">
             <div class="logo"> 
-                <img src="Galeria de fotos/Logo Panadería Pando-4-Photoroom.png" alt="logo" class="icono"> <span>Panaderia Pando</span>
+                <img src="Galeria de fotos/Logo Panadería Pando-4-Photoroom.png" alt="logo" class="icono"> <span>Panadería Pando</span>
             </div>
             <button id="btn-hamburguesa" class="hamburguesa" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-lateral">
                 <span></span><span></span><span></span>
@@ -77,21 +77,39 @@
               <img src="Galeria de fotos/pan croissant.jpeg" alt="croissant">
               <h3>Pan Croissant</h3>
               <p>Deleítate de su sabor, un producto suave y delicioso.</p>
-              <span class="precio">Valor: $2,500</span>
+                <div class="precio-carrito">
+                    <span class="precio">Valor: $2,500</span>
+                    <button class="btn-agregar" data-nombre="Pan Croissant" data-precio="2500">
+                        <i class="fas fa-cart-plus"></i>
+                        <span>Agregar</span>
+                    </button>
+                </div>
           </div>
 
           <div class="foto-producto">
               <img src="Galeria de fotos/pan de queso.jpeg" alt="pan de queso">
               <h3>Pan de queso</h3>
               <p>Clásico y lleno de sabor, ideal para acompañar.</p>
-              <span class="precio">Valor: $3,500</span>
+                <div class="precio-carrito">
+                    <span class="precio">Valor: $3,500</span>
+                    <button class="btn-agregar" data-nombre="Pan de queso" data-precio="3500">
+                        <i class="fas fa-cart-plus"></i>
+                        <span>Agregar</span> 
+                    </button>
+                </div>
           </div>
 
           <div class="foto-producto">
               <img src="Galeria de fotos/pan frances.jpg" alt="pan frances">
               <h3>Pan Francés</h3>
               <p>Perfecto para desayunos y comidas ligeras.</p>
-              <span class="precio">Valor: $5,500</span>
+                <div class="precio-carrito">
+                    <span class="precio">Valor: $5,500</span>
+                    <button class="btn-agregar" data-nombre="Pan Frances" data-precio="5500">
+                        <i class="fas fa-cart-plus"></i>
+                        <span>Agregar</span>  
+                    </button>
+                </div>
           </div>
       </div>
   </section>
@@ -100,7 +118,7 @@
   <footer>
       <div id="footer-contenido" class="footer-contenido">
           <div class="footer-col">
-              <h3>🥖 Panadería Rojanos</h3>
+              <h3>🥖 Panadería Pando</h3>
               <p>Tradición y frescura en cada producto. <br>
                  Nuestra visión es siempre llevar una <br>
                  sonrisa con nuestro sabor único.</p>
