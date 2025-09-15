@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panaderia Pando</title>
+    <title>Panes - Pando</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" sizes="64x64" href="Galeria de fotos/Logo Panadería Pando-4-Photoroom.png">
     <link href="https://fonts.cdnfonts.com/css/bakery-goods" rel="stylesheet">
@@ -15,11 +15,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <!-- Navegación -->
-    <nav class="navbarra">
+    <!-- Navegación sub-página-->
+<nav class="navbarra">
         <div class="grupo-izquierda">
             <div class="logo"> 
                 <img src="Galeria de fotos/Logo Panadería Pando-4-Photoroom.png" alt="logo" class="icono"> <span>Panadería Pando</span>
@@ -28,8 +28,8 @@
                 <span></span><span></span><span></span>
             </button>
         </div>
-        <aside class="menu-lateral" id="menu-lateral">
-            <button class="cerrar" id="cerrar-menu" aria-label="Cerrar menú">x</button>
+        <div class="menu-lateral" id="menu-lateral">
+            <button class="cerrar" id="cerrar-menu" aria-label="Cerrar menú">X</button>
             <ul>
                 <li class="submenu1">
                     <a href="#" class="flechita">Domicilios</a>
@@ -48,10 +48,10 @@
                 <li class="menu2"><a href="#">Ubicación</a></li>
                 <li class="menu2"><a href="#">Contacto</a></li>
             </ul>
-        </aside>
+        </div>
         <div class="overlay" id="overlay"></div>
         <ul id="menu-principal" class="menu">
-            <li><a href="#"> Inicio</a></li>
+            <li><a href="index.html"> Inicio</a></li>
             <li><a href="#">Sobre mí</a></li>
             <li><a href="#footer-contenido">Contactanos</a></li>
             <li><a href="#catalogo">Nuestros productos</a></li>
@@ -61,106 +61,91 @@
             <a href="#" class="btn-carrito">🛒 $0</a>
         </div>
     </nav>
-    <!--    PARTE PREVIA A PRODUCTOS (Hero contenido)-->
-    <header id="inicial" class="hero-principal">
-        <div class="contenido-hero">
-            <h1>Pan sabroso<br> y doradito :D</h1>
-        </div>
-    </header>
-    
-    <!--  Productos  -->
+ <!-- ✅ Hero de la subpágina panes (individual para cada hero de subpágina, se debe cambiar la clase)-->
+  <header class="hero-galletas">
+      <div class="contenido-hero">
+          <h1>Disfruta de nuestras galletas</h1>
+          <p>Recién horneadas, crujientes y con el mejor sabor artesanal.</p>
+      </div>
+  </header>
 
-    <section id="catalogo" class="productos">
-        <h2>Nuestros productos destacados</h2>
-        
-        <div class="all-product">
-            <div class="foto-producto">
-                <img src="Galeria de fotos/pan croissant.jpeg" alt="croissant">
-                <h3>Pan Croissant</h3>
-                <p> Deleitate de su sabor, un producto suave y delicioso.</p>
+  <!-- ✅ Catálogo de panes -->
+  <section id="catalogo" class="productos">
+      <h2>Galletas</h2>
+      <div class="all-product">
+          <div class="foto-producto">
+              <img src="Galeria de fotos/hero-galletas.jpg" alt="Punto rojo">
+              <h3>Galleta punto rojo</h3>
+              <p>Deleítate de su sabor, un producto suave y delicioso.</p>
                 <div class="precio-carrito">
                     <span class="precio">Valor: $2,500</span>
-                    <button class="btn-agregar" data-nombre="Pan Croissant" data-precio="2500">
+                    <button class="btn-agregar" data-nombre="Galleta punto rojo" data-precio="2500">
                         <i class="fas fa-cart-plus"></i>
                         <span>Agregar</span>
                     </button>
                 </div>
-            </div>
+          </div>
 
-            <div class="foto-producto">
-                <img src="Galeria de fotos/pan de queso.jpeg" alt="pan de queso">
-                <h3>Pan de queso</h3>
-                <p> Deleitate de su sabor, un producto suave y delicioso.</p>
+          <div class="foto-producto">
+              <img src="Galeria de fotos/galleta de queso.jpg" alt="Galleta de queso">
+              <h3>Galleta de queso</h3>
+              <p>Clásico y lleno de sabor, ideal para acompañar.</p>
                 <div class="precio-carrito">
                     <span class="precio">Valor: $3,500</span>
-                    <button class="btn-agregar" data-nombre="Pan de queso" data-precio="3500">
+                    <button class="btn-agregar" data-nombre="Galleta de queso" data-precio="3500">
                         <i class="fas fa-cart-plus"></i>
                         <span>Agregar</span> 
                     </button>
                 </div>
-            </div>
+          </div>
 
-            <div class="foto-producto">
-                <img src="Galeria de fotos/pan frances.jpg"alt="pan frances">
-                <h3>Pan Francés</h3>
-                <p> Deleitate de su sabor, un producto suave y delicioso.</p>
+          <div class="foto-producto">
+              <img src="Galeria de fotos/choco chips.jpg" alt="Galleta de chispas de chocolate">
+              <h3>Galleta Choco-Chips</h3>
+              <p>Perfecto para desayunos y comidas ligeras.</p>
                 <div class="precio-carrito">
                     <span class="precio">Valor: $5,500</span>
-                    <button class="btn-agregar" data-nombre="Pan Frances" data-precio="5500">
+                    <button class="btn-agregar" data-nombre="Galleta Choco-Chips" data-precio="5500">
                         <i class="fas fa-cart-plus"></i>
                         <span>Agregar</span>  
                     </button>
                 </div>
-            </div>
+          </div>
+      </div>
+  </section>
 
-            <div class="foto-producto">
-                <img src="Galeria de fotos/tajado.jpg"alt="tajado">
-                <h3>Pan Tajado</h3>
-                <p> Deleitate de su sabor, un producto suave y delicioso.</p>
-                <div class="precio-carrito">
-                    <span class="precio">Valor: $10,000</span>
-                    <button class="btn-agregar" data-nombre="Pan Tajado" data-precio="10000">
-                        <i class="fas fa-cart-plus"></i>
-                        <span>Agregar</span>
-                    </button>
-                </div>
-            </div>
-        </div>    
-    </section>
-    
-    <footer>
-        <div id="footer-contenido" class="footer-contenido">
+  <!-- ✅ Footer -->
+  <footer>
+      <div id="footer-contenido" class="footer-contenido">
+          <div class="footer-col">
+              <h3>🥖 Panadería Pando</h3>
+              <p>Tradición y frescura en cada producto. <br>
+                 Nuestra visión es siempre llevar una <br>
+                 sonrisa con nuestro sabor único.</p>
+          </div>
 
-            <div class="footer-col">
-                <h3>🥖 Panadería Pando</h3>
-                <p>Tradición y frescura en cada producto. <br>
-                    Nuestra visión es siempre 
-                    llevar una <br>sonrisa con nuestro sabor único, y <br>
-                    disfrutes de un pan sabroso y doradito</p>
-            </div>
+          <div class="footer-col">
+              <h3>📍 Contáctanos</h3>
+              <p>📌 Calle 123 #45-67, Barranquilla</p>
+              <p>📞 +57 300 123 4567</p>
+              <p>✉️ contacto@rojano-pan.com</p>
+          </div>
 
-            <div class="footer-col">
-                <h3>📍 Contáctanos</h3>
-                <p>📌 Calle 123 #45-67, Barranquilla/Atlántico</p>
-                <p>📞 +57 300 123 4567</p>
-                <p>✉️ contacto@rojano-pan.com</p>
-            </div>
+          <div class="footer-col">
+              <h3>🌐 Síguenos</h3>
+              <div class="redes-sociales">
+                  <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+                  <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                  <a href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a>  
+              </div>
+          </div>
+      </div>
 
-            <div class="footer-col">
-                <h3>🌐 Síguenos</h3>
-                <div class="redes-sociales">
-                    <!-- Icons by Font Awesome (https://fontawesome.com) -->
-                    <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
-                    <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
-                    <a href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a>  
-                </div>
-            </div>
-        </div>
+      <div class="footer-boton">
+          <small>&copy; 2025 Ing. Erick Rojano - Todos los derechos reservados</small>
+      </div>
+  </footer>
 
-        <div class="footer-boton">
-            <small>&copy; 2025 Ing. Erick Rojano - Todos los derechos reservados</small>
-        </div>
-    </footer>
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
